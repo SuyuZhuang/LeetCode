@@ -72,7 +72,9 @@ class Solution {
 
 
 // 官方答案，代码更简洁，50ms
- ListNode dummyNode = new ListNode(0);
+class Solution {
+    public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
+         ListNode dummyNode = new ListNode(0);
         ListNode p = l1, q = l2, curr = dummyNode;
         int carry = 0;
         while (p != null || q != null){
@@ -92,3 +94,5 @@ class Solution {
         }
         
         return dummyNode.next;
+    }
+}
