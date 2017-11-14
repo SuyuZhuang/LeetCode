@@ -4,3 +4,6 @@ SELECT Max(Salary) as SecondHighestSalary FROM Employee WHERE Salary NOT IN (SEL
 
 -- use < , 938ms
 SELECT Max(Salary) as SecondHighestSalary FROM Employee WHERE Salary < (SELECT Max(Salary) FROM Employee);
+
+－－ use Distinct Limit offset, 943ms
+SELECT (SELECT distinct Salary From Employee Order BY Salary Desc Limit 1 Offset 1) as SecondHighestSalary;
