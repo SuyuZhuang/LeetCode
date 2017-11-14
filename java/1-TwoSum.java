@@ -1,4 +1,4 @@
-// approach1, brute force, 暴力算法
+// approach1, brute force, 暴力算法 41ms
 public int[] twoSum1(int[] nums, int target) {
     for (int i = 0; i < nums.length; i++) {
         for (int j = i + 1; j < nums.length; j++) {
@@ -10,7 +10,7 @@ public int[] twoSum1(int[] nums, int target) {
     throw new IllegalArgumentException("No two sum solution");
 }
 
-// approach2, Two-pass Hash Table
+// approach2, Two-pass Hash Table, 9ms
 class Solution {
     public int[] twoSum2(int[] nums, int target) {
         Map<Integer,Integer> map = new HashMap<>();
@@ -27,7 +27,7 @@ class Solution {
     }
 }
 
-// approach3, One-pass Hash Table
+// approach3, One-pass Hash Table, 9ms
 class Solution {
     public int[] twoSum(int[] nums, int target) {
         Map<Integer,Integer> map = new HashMap<>();
